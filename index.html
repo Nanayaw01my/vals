@@ -17,126 +17,16 @@
 
         body {
             font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
             color: #5a3d5c;
             min-height: 100vh;
             overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Romantic Live Background */
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .gradient-bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, 
-                rgba(255, 175, 189, 0.9) 0%, 
-                rgba(255, 195, 160, 0.9) 25%, 
-                rgba(255, 235, 240, 0.9) 50%, 
-                rgba(214, 77, 114, 0.85) 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 20s ease infinite;
-        }
-
-        .stars {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .star {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            animation: twinkle 3s infinite alternate;
-        }
-
-        .hearts-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .floating-heart {
-            position: absolute;
-            color: rgba(255, 107, 147, 0.7);
-            font-size: 24px;
-            animation: floatHeart linear infinite;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        .pulse-circle {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
-            animation: pulse 4s infinite alternate;
-        }
-
-        .love-words {
-            position: absolute;
-            color: rgba(255, 255, 255, 0.6);
-            font-family: 'Dancing Script', cursive;
-            font-size: 24px;
-            opacity: 0;
-            animation: fadeInOut 8s infinite;
-        }
-
-        /* Animations for background */
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-
-        @keyframes floatHeart {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.7;
-            }
-            90% {
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.3; }
-            100% { transform: scale(2); opacity: 0; }
-        }
-
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 0; transform: translateY(20px); }
-            25%, 75% { opacity: 0.7; transform: translateY(0); }
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            position: relative;
-            z-index: 1;
         }
 
         /* Header Styles */
@@ -144,12 +34,6 @@
             text-align: center;
             padding: 30px 20px;
             position: relative;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         h1 {
@@ -158,7 +42,6 @@
             color: #d14d72;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         .subtitle {
@@ -178,7 +61,6 @@
         .heart {
             font-size: 2.5rem;
             color: #ff6b93;
-            filter: drop-shadow(0 0 8px rgba(255, 107, 147, 0.5));
         }
 
         /* Main Content Styles */
@@ -197,8 +79,6 @@
             max-width: 800px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .message-box:hover {
@@ -249,8 +129,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .photo-frame:hover {
@@ -278,7 +156,6 @@
             text-align: center;
             font-weight: 600;
             color: #8a4b7c;
-            backdrop-filter: blur(5px);
         }
 
         /* Interactive Section */
@@ -290,7 +167,7 @@
             margin-top: 20px;
         }
 
-        .countdown, .love-meter {
+        .countdown {
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             padding: 25px;
@@ -298,11 +175,9 @@
             max-width: 600px;
             text-align: center;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .countdown h3, .love-meter h3 {
+        .countdown h3 {
             font-family: 'Dancing Script', cursive;
             font-size: 2.5rem;
             color: #d14d72;
@@ -342,6 +217,23 @@
             font-weight: 600;
         }
 
+        .love-meter {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .love-meter h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #d14d72;
+            margin-bottom: 20px;
+        }
+
         .meter-container {
             width: 100%;
             height: 40px;
@@ -377,13 +269,11 @@
             margin-top: 15px;
             transition: all 0.3s ease;
             font-weight: 600;
-            box-shadow: 0 5px 15px rgba(255, 107, 147, 0.3);
         }
 
         .meter-btn:hover {
             background-color: #d14d72;
             transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(255, 107, 147, 0.5);
         }
 
         /* Footer */
@@ -394,16 +284,11 @@
             font-size: 1.1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.4);
             margin-top: 30px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .footer-heart {
             color: #ff6b93;
             animation: heartbeat 1.5s infinite;
-            filter: drop-shadow(0 0 5px rgba(255, 107, 147, 0.5));
         }
 
         /* Animations */
@@ -447,10 +332,6 @@
                 width: 180px;
                 height: 180px;
             }
-            
-            .floating-heart, .love-words {
-                font-size: 18px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -470,23 +351,10 @@
             .countdown-timer {
                 flex-wrap: wrap;
             }
-            
-            .floating-heart, .love-words {
-                font-size: 14px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Romantic Live Background -->
-    <div class="background-container">
-        <div class="gradient-bg"></div>
-        <div class="stars" id="stars"></div>
-        <div class="hearts-container" id="hearts-container"></div>
-        <div class="pulse-circles" id="pulse-circles"></div>
-        <div class="love-words-container" id="love-words"></div>
-    </div>
-
     <div class="container">
         <header>
             <h1>For My Beautiful Girlfriend</h1>
@@ -592,112 +460,6 @@
         // Set your relationship start date (change this to your actual date)
         const relationshipStartDate = new Date('2023-06-15');
         
-        // Romantic background elements
-        const romanticWords = [
-            "Love", "Forever", "Together", "My Heart", "Sweetheart", 
-            "Darling", "My Everything", "Soulmate", "Beautiful", "Amazing",
-            "I Love You", "Always", "Perfect", "Adore", "Cherish"
-        ];
-        
-        // Create stars
-        const starsContainer = document.getElementById('stars');
-        for (let i = 0; i < 80; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.style.width = Math.random() * 4 + 2 + 'px';
-            star.style.height = star.style.width;
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
-            star.style.animationDelay = Math.random() * 3 + 's';
-            star.style.animationDuration = Math.random() * 2 + 2 + 's';
-            starsContainer.appendChild(star);
-        }
-        
-        // Create floating hearts
-        const heartsContainer = document.getElementById('hearts-container');
-        function createFloatingHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'floating-heart';
-            heart.innerHTML = '<i class="fas fa-heart"></i>';
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.fontSize = Math.random() * 20 + 15 + 'px';
-            heart.style.animationDuration = Math.random() * 10 + 10 + 's';
-            heart.style.color = `rgba(255, ${Math.floor(Math.random() * 100 + 100)}, ${Math.floor(Math.random() * 100 + 150)}, ${Math.random() * 0.5 + 0.3})`;
-            heartsContainer.appendChild(heart);
-            
-            // Remove heart after animation completes
-            setTimeout(() => {
-                if (heart.parentNode) {
-                    heart.remove();
-                }
-            }, parseFloat(heart.style.animationDuration) * 1000);
-        }
-        
-        // Create pulse circles
-        const pulseContainer = document.getElementById('pulse-circles');
-        function createPulseCircle() {
-            const circle = document.createElement('div');
-            circle.className = 'pulse-circle';
-            circle.style.width = Math.random() * 300 + 100 + 'px';
-            circle.style.height = circle.style.width;
-            circle.style.left = Math.random() * 100 + '%';
-            circle.style.top = Math.random() * 100 + '%';
-            circle.style.animationDuration = Math.random() * 4 + 2 + 's';
-            pulseContainer.appendChild(circle);
-            
-            // Remove circle after animation completes
-            setTimeout(() => {
-                if (circle.parentNode) {
-                    circle.remove();
-                }
-            }, 4000);
-        }
-        
-        // Create floating love words
-        const loveWordsContainer = document.getElementById('love-words');
-        function createLoveWord() {
-            const word = document.createElement('div');
-            word.className = 'love-words';
-            word.textContent = romanticWords[Math.floor(Math.random() * romanticWords.length)];
-            word.style.left = Math.random() * 80 + 10 + '%';
-            word.style.top = Math.random() * 80 + 10 + '%';
-            word.style.fontSize = Math.random() * 15 + 20 + 'px';
-            word.style.animationDelay = Math.random() * 5 + 's';
-            word.style.animationDuration = Math.random() * 10 + 10 + 's';
-            loveWordsContainer.appendChild(word);
-            
-            // Remove word after animation completes
-            setTimeout(() => {
-                if (word.parentNode) {
-                    word.remove();
-                }
-            }, parseFloat(word.style.animationDuration) * 1000);
-        }
-        
-        // Initialize background animations
-        function initBackground() {
-            // Create initial hearts
-            for (let i = 0; i < 15; i++) {
-                setTimeout(createFloatingHeart, i * 300);
-            }
-            
-            // Create initial pulse circles
-            for (let i = 0; i < 5; i++) {
-                setTimeout(createPulseCircle, i * 500);
-            }
-            
-            // Create initial love words
-            for (let i = 0; i < 8; i++) {
-                setTimeout(createLoveWord, i * 800);
-            }
-            
-            // Set up intervals for continuous animation
-            setInterval(createFloatingHeart, 800);
-            setInterval(createPulseCircle, 2000);
-            setInterval(createLoveWord, 3000);
-        }
-        
-        // Countdown functionality
         function updateCountdown() {
             const now = new Date();
             const diff = now - relationshipStartDate;
@@ -756,46 +518,58 @@
             this.innerHTML = `Love Increased! <i class="fas fa-heart"></i>`;
             this.style.backgroundColor = '#d14d72';
             
-            // Create celebration hearts
-            for (let i = 0; i < 10; i++) {
-                setTimeout(() => {
-                    const heart = document.createElement('div');
-                    heart.innerHTML = '<i class="fas fa-heart"></i>';
-                    heart.style.position = 'fixed';
-                    heart.style.color = '#ff6b93';
-                    heart.style.fontSize = '24px';
-                    heart.style.left = Math.random() * 100 + 'vw';
-                    heart.style.top = '80vh';
-                    heart.style.zIndex = '1000';
-                    heart.style.pointerEvents = 'none';
-                    document.body.appendChild(heart);
-                    
-                    // Animate the celebration heart
-                    const animation = heart.animate([
-                        { transform: 'translateY(0) scale(1)', opacity: 1 },
-                        { transform: `translateY(-${Math.random() * 300 + 100}px) scale(1.5)`, opacity: 0 }
-                    ], {
-                        duration: 1000,
-                        easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
-                    });
-                    
-                    animation.onfinish = () => heart.remove();
-                }, i * 100);
-            }
-            
             setTimeout(() => {
                 this.innerHTML = `Increase My Love <i class="fas fa-heart"></i>`;
                 this.style.backgroundColor = '#ff6b93';
             }, 1000);
         });
         
-        // Initialize everything
-        initBackground();
+        // Initialize
         updateCountdown();
         updateLoveMeter();
         
         // Update countdown every hour
         setInterval(updateCountdown, 60 * 60 * 1000);
+        
+        // Add some floating hearts animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const colors = ['#ff6b93', '#ff8fab', '#ffafbd', '#ffc3a0'];
+            
+            function createFloatingHeart() {
+                const heart = document.createElement('div');
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                heart.style.position = 'fixed';
+                heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = '100vh';
+                heart.style.opacity = '0.7';
+                heart.style.pointerEvents = 'none';
+                heart.style.zIndex = '-1';
+                document.body.appendChild(heart);
+                
+                // Animation
+                const animation = heart.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 0.7 },
+                    { transform: `translateY(-${Math.random() * 300 + 100}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 3000 + 2000,
+                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                });
+                
+                animation.onfinish = () => {
+                    heart.remove();
+                };
+            }
+            
+            // Create floating hearts occasionally
+            setInterval(createFloatingHeart, 800);
+            
+            // Add a few hearts immediately
+            for (let i = 0; i < 10; i++) {
+                setTimeout(createFloatingHeart, i * 200);
+            }
+        });
     </script>
 </body>
 </html>
