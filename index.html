@@ -386,35 +386,12 @@
                 </p>
                 <div class="message-signature">Forever Yours</div><br>Efo</br>
             </div>
-<script>
-            
-                // Animation
-                const animation = heart.animate([
-                    { transform: 'translateY(0) rotate(0deg)', opacity: 0.7 },
-                    { transform: `translateY(-${Math.random() * 300 + 100}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
-                ], {
-                    duration: Math.random() * 3000 + 2000,
-                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
-                });
-                
-                animation.onfinish = () => {
-                    heart.remove();
-                };
-            }
-            
-            // Create floating hearts occasionally
-            setInterval(createFloatingHeart, 800);
-            
-            // Add a few hearts immediately
-            for (let i = 0; i < 10; i++) {
-                setTimeout(createFloatingHeart, i * 200);
-            }
-        });
-    </script>
+ 
 </body>
 </html>
 
 
  
+
 
 
